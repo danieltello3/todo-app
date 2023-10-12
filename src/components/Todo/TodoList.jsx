@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./todoList.scss";
 import TodoItem from "../TodoItem/TodoItem";
 
@@ -26,10 +26,6 @@ const TodoList = () => {
       console.log(index);
       setTodos(nuevosTodos);
    };
-
-   useEffect(()=>{
-    setTodos([...todos, { id: 1, text: 'Go to the gym', completed: false}])
-   },[])
 
    return (
       <div className="container-list">
