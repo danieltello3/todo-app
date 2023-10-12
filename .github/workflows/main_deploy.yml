@@ -38,11 +38,25 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
-    - name: Build Docker image
+    - name: Build Docker Image
       run: docker build -t todo-app .
-      
-    - name: Tag Docker image
+
+    - name: Tag Docker Image
       run: docker tag todo-app danieltello3/todo-app:latest
 
     - name: Push to Dockerhub
       run: docker push danieltello3/todo-app:latest
+
+  deploy:
+
+    runs-on: self-hosted
+
+    steps:
+    - name: Pull Docker Image
+      run: sudo docker pull danieltello3/todo-app:latest
+
+    - name: Delete Old Docker Container
+      run: docker rm -f todo-app-container || true
+      
+    - name: Run Docker Container
+      run: docker run -d -p 3000:3000 --name todo-app-container danieltello3/todo-app:latest
