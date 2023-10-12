@@ -40,6 +40,9 @@ jobs:
 
     - name: Build Docker image
       run: docker build -t todo-app .
+      
+    - name: Tag Docker image
+      run: docker tag todo-app danieltello3/todo-app:latest
 
     - name: Push to Dockerhub
       run: docker push danieltello3/todo-app:latest
