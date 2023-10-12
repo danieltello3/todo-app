@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  min-width: 250px;
+  border: 1px solid #556abf;
+  border-radius: 15px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.text{
+  font-size: 16px;
+  font-weight: 500;
+}

@@ -1,12 +1,10 @@
-import "./App.css";
-import Form from "./components/Form";
+import 'material-icons/iconfont/material-icons.css';
+import TodoList from "./components/Todo/TodoList";
 
 function App() {
    return (
       <div className="App">
-         <header>
-            <h1>To Do app</h1>
-         </header>
+         <TodoList />
       </div>
    );
 }
