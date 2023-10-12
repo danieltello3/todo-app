@@ -42,4 +42,4 @@ jobs:
       run: docker build -t todo-app .
 
     - name: Push to Dockerhub
-      run: docker push $DOCKER_USERNAME/todo-app:latest
+      run: docker push danieltello3/todo-app:latest
