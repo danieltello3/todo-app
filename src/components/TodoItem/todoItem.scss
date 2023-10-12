@@ -6,13 +6,25 @@
   min-width: 250px;
   border: 1px solid #556abf;
   border-radius: 15px;
+
 }
 
 .icon {
   cursor: pointer;
 }
 
+.completed {
+  background-color: #5f9f3c;
+  color: #fff;
+  text-decoration: line-through;
+}
+
 .text{
   font-size: 16px;
   font-weight: 500;
+  flex: 1;
+  padding: 0 8px;
 }
+
+.material-icons.white { color: #fff; }
+
