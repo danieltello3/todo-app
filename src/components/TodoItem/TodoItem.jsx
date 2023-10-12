@@ -2,7 +2,7 @@ import React from "react";
 import "./todoItem.scss";
 
 const TodoItem = ({ todo, onDelete }) => {
-  const {id, text, completed } = todo;
+  const {id, text } = todo;
    return (
       <div className="container" data-testid={`todo-item-${id}`}>
          <div className="text">{text}</div>
