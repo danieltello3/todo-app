@@ -34,7 +34,7 @@ const TodoList = () => {
    return (
       <div className="container-list">
          <h1>To-Do APP</h1>
-         <div>
+         <div className="search">
             <input
                type="text"
                placeholder="Agregar una tarea"

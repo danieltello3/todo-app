@@ -17,4 +17,32 @@
     align-items: center;
     gap: 10px;
   }
+
+  .search {
+    min-width: 500px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #556abf;
+      border-radius: 15px 0 0 15px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    
+    button {
+      padding: 10px 20px;
+      border: 1px solid #556abf;
+      border-radius: 0 15px 15px 0;
+      background-color: #556abf;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
 }
