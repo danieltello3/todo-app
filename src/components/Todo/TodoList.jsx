@@ -19,6 +19,16 @@ const TodoList = () => {
       setTodos(nuevosTodos);
    };
 
+   const completarTodo = (index) => {
+      const nuevosTodos = todos.map((item) => {
+         if (item.id === index) {
+            item.completed = !item.completed;
+         }
+         return item;
+      });
+      setTodos(nuevosTodos);
+   }
+
    const handleEnterKey = (e) => {
     if (e.key === 'Enter') {
       agregarTodo();
@@ -39,8 +49,8 @@ const TodoList = () => {
             <button onClick={agregarTodo}>Agregar</button>
          </div>
          <div className="items-list">
-            {todos.sort((a,b)=> b.id - a.id).map((tarea, index) => (
-               <TodoItem todo={tarea} key={tarea.id} onDelete={() => eliminarTodo(tarea.id)} />
+            {todos.sort((a,b)=> b.id - a.id).sort((a,b)=> a.completed - b.completed).map((tarea, index) => (
+               <TodoItem todo={tarea} key={tarea.id} onDelete={() => eliminarTodo(tarea.id)} onCompleted={()=> completarTodo(tarea.id)}/>
             ))}
          </div>
       </div>
